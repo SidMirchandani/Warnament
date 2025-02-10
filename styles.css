@@ -1,0 +1,497 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Alegreya', sans-serif;
+}
+
+/* Body & Layout */
+body {
+  font-family: 'Alegreya', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Container for center alignment */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Header Section */
+header {
+  padding-bottom: 3vh;
+  background: white;
+  color: rgba(0, 40, 20, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content from the top */
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 25vh; /* Increase padding-top to push content further down */
+  line-height: 1;
+  transition: background 0.3s ease-in-out;
+  height: 700px;
+  box-shadow: rgba(210, 176, 0, 0.2) 0px 7px 29px 0px;
+}
+
+subheader {
+  background: white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align content from the top */
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  transition: background 0.3s ease-in-out;
+  margin: auto;
+  box-shadow: rgba(210, 176, 0, 0.2) 0px 7px 29px 0px;
+}
+
+subheader div{
+  justify-content: center; /* Align content from the top */
+  align-items: center;
+}
+
+subheader img{
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+
+subheader img:hover{
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+header img{
+  width: 50vh;
+  border-radius: 2vh;
+  box-shadow: rgba(210,176,0,0.4) 0px 50px 100px;
+  margin-top: 10vh;
+}
+
+header h3{
+  color: #635300;
+  width: 50vh;
+  text-align: center;
+  border-radius: 2vh;
+  box-shadow: rgba(210,176,0,0.4) 0px 50px 100px;
+  margin-top: 10vh;
+  padding: 30px;
+  background-color: white;
+}
+
+/* Navigation Bar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 20px 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+nav ul li img{
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #635300;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 2px 5px;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  font-weight: 1000;
+}
+
+nav ul li a:hover {
+  background-color: #635300;
+  color: white;
+  transform: translateY(-3px); /* Subtle hover effect */
+}
+
+/* Main Sections */
+main {
+  padding-top: 80px; /* Adjusted space to account for navbar */
+}
+
+/* Section Styling */
+
+
+.section p {
+  font-size: 11px;
+  color: black;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0 auto; /* Centers the paragraph under the heading */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ========= Main Content ========= */
+main {
+  padding-top: 100px; /* To account for fixed nav */
+}
+.section {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 95%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  animation: fadeIn 1.5s ease-out forwards;
+  margin-bottom: 40px;
+}
+.section h3 {
+  color: #635300;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ========= Timeline Navigation ========= */
+.timeline-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.timeline-point {
+  padding: 10px 15px;
+  background-color: #635300;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 10px;
+}
+.timeline-point:hover,
+.timeline-point.active {
+  background-color: #403000;
+}
+.timeline-group {
+  display: block;
+}
+.timeline-group[style*="display: none"] {
+  display: none;
+}
+
+/* ========= Puzzle Section Styles ========= */
+.puzzle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between puzzle and full image */
+  flex-wrap: wrap;
+}
+
+#full-image-container {
+  text-align: center;
+  align-items: center;
+}
+
+#full-image {
+  width: 256px; /* Adjust to fit */
+  height: 256px; /* Same as puzzle board */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+}
+
+#puzzle-board {
+  margin: 0 auto;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(4, 60px); /* Even smaller grid cells */
+  grid-template-rows: repeat(4, 60px); /* Even smaller grid cells */
+}
+
+.drop-zone {
+  border: 1px dashed #ccc;
+  box-sizing: border-box;
+  width: 10px; /* Match the grid cell size */
+  height: 10px; /* Match the grid cell size */
+}
+
+#puzzle-pieces {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px; /* Reduced gap between pieces */
+}
+
+.puzzle-piece {
+  background-repeat: no-repeat;
+  cursor: grab;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.2s ease, border-radius 0.2s ease;
+  border-radius: 10px;
+}
+
+.puzzle-piece:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Reduced shadow on hover */
+  border-radius: 10px;
+}
+
+.puzzle-piece.dragging {
+  opacity: 0.7;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Reduced shadow while dragging */
+  border-radius: 10px;
+}
+
+.puzzle-piece.locked {
+  cursor: default;
+  border-radius: 0px;
+}
+/* ========= Popup Modal ========= */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+  z-index: 2000;
+}
+.popup.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-color: black;
+}
+.popup-content h2 {
+  margin-bottom: 10px;
+  color: black;
+}
+.popup-content p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ========= Footer ========= */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+footer p {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+/* ========= Animations ========= */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h4{
+  font-color: black;
+}
+
+.stats p {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.actions button {
+  color: #635300;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  border: none;
+  background: none;
+}
+
+.actions button:hover {
+  color: #403000;
+}
+
+#event-log {
+  margin-top: 20px;
+  font-size: 11px;
+  font-style: italic;
+  color: white;
+}
+
+.stats{
+  color: black;
+  display: flex;
+  gap: 0px 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+h1{
+  color: black;
+}
+
+#game-log{
+  color: black;
+  text-align: center;
+}
+
+#event-log p {
+  color: black; /* Change text color to black */
+  background: #f3f3f3; /* Add a white background to make it readable */
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin: 5px 0;
+  font-size: 11px;
+}
+
+#game-container {
+  text-align: center;
+}
+
+.user-message {
+  display: inline-block;
+  background-color: rgba(300, 200, 23, 0.1);
+  color: #635300;
+  border-radius: 20px 20px 20px 10px;
+  padding: 8px 12px;
+  margin: 5px 0;
+  max-width: 70%;
+  font-size: 11px;
+}
+.bot-message {
+  font-size: 11px;
+  color: black;
+  white-space: pre-line;
+}
+
+/* Toggle Button for Widget Sidebar */
+.toggle-widget-sidebar {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: #635300;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Chat Interface Styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chatbot {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.25) 0 0 24px;
+}
+.chatbot h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  color: #635300;
+}
+.chat-window {
+  height: 200px;
+  overflow-y: auto;
+  background-color: #f3f3f3;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.horizontal {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+}
+.horizontal button {
+  background-color: #635300;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.options {
+  font-weight: bold;
+}
+
