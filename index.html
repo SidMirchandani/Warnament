@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Napoleonic War Simulator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.postimg.cc/nzWz8pNR/Napoleon-D-Short.png" type="image/x-icon">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <img src="https://i.postimg.cc/nzWz8pNR/Napoleon-D-Short.png" alt="Logo">
+      <h3>Napoleonic Wars Simulator</h3>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="container">
+        <ul>
+          <li>
+            <img src="https://i.postimg.cc/cC8J0PSs/Napoleon-D-Long.png" alt="Long Logo" height="50px">
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- Napoleonic War Simulator -->
+    <main class="container">
+      <section class="section">
+        <div id="game-container">
+          <h3>Rules</h3>
+          <p>
+            Recruit soldiers with gold to build your French army to glory! <br>
+            Each move, you can declare war on other teams. The next term, you can attack them, and your chances of winning the battle are based on your army size and morale. More wins, higher morale. <br>
+            But beware! They can declare war on you, too! Check your statistics to ensure you don't make any mistakes.
+          </p>
+
+        </div>
+      </section>
+      <section class="section">
+        <div id="game-container">
+          <h3>Play!</h3>
+
+          <div class="stats">
+            <p>💰 Gold: <span id="gold">200</span></p>
+            <p>⚔️ Army: <span id="army">30</span></p>
+            <p>🔥 Morale: <span id="morale">1.00</span></p>
+            <p>📅 Date: <span id="date">April 1792</span></p>
+            <p>📜 Turn: <span id="turn">0</span></p>
+            <p>🏴‍☠️ Conquered: <span id="conquered-countries">None</span></p>
+            <p>⚔️ At War: <span id="countries-at-war">None</span></p>
+            <p>🌍 Remaining: <span id="remaining-countries">Austria, Prussia, Britain, Spain, Russia, Portugal, Piedmont-Sardinia</span></p>
+          </div>
+
+          <div class="actions">
+            <button onclick="recruitSoldiers()">Recruit Soldiers</button>
+            <button onclick="showDeclareWarMenu()">Declare War</button>
+            <button onclick="showAttackMenu()">Attack</button>
+            <button onclick="showPeaceMenu()">Make Peace</button>
+            <button onclick="endTurn()">End Turn</button>
+            <div id="declare-war-menu" class="submenu"></div>
+            <div id="attack-menu" class="submenu"></div>
+            <div id="peace-menu" class="submenu"></div>
+          </div>
+
+          <div id="event-log"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025. Made with ❤️ by Team D</p>
+      </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
